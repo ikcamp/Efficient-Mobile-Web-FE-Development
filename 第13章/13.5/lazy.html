@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+	<div style="height: 2000px; width: 1000px"></div>
+	<img data-src="./logo.png">
+  <script type="text/javascript">
+  (function() {
+	  	var imgList = Array.prototype.slice.call(document.querySelectorAll('img')); //获取所有图片
+		function loadImage() {
+		  for (var i = 0; i < imgList.length; i++) {
+		    // 遍历图片集合
+		    var el = imgList[i];
+		    if (isShow(el)) {
+		      // 如果图片出现
+		      el.src = el.getAttribute('data-src'); // 给src赋值
+		      imgList.splice(i, 1); // 去除已加载的
+		    }
+		  }
+		}
+		function isShow(el) {
+		  // 获取图片在屏幕中图片顶部与屏幕顶部的距离，图片底部与屏幕顶部的距离，图片左边框与屏幕左侧的距离，图片右边框与屏幕左侧的距离，及图片的宽高。
+		  var rect = el.getBoundingClientRect();
+		  // 如果rect.right 或rect.bottom 小于0，意味着图片整体未进入屏幕，如果在大于0的情况下，rect.top和rect.left比较innerWidth和innerHeight，保证图片在部分进入后就开始加载
+		  var isAppear =
+		    rect.right > 0 &&
+		    rect.left < window.innerWidth &&
+		    rect.bottom > 0 &&
+		    rect.top < window.innerHeight;
+		  return isAppear;
+		}
+		window.addEventListener('scroll', loadImage, false)
+	})()
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+{
+  "name": "react-test-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js",
+    "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover _mocha --  --require ./test/setup.js",
+    "cover1": "istanbul cover tape ./test/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-istanbul": "^0.12.2",
+    "babel-preset-react": "^6.23.0",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "jsdom": "^9.12.0",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.2",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}

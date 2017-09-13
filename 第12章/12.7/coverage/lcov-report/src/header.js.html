@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/header.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> header.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">const React = require("react")
+const {loadData, saveData, sortArrayByProp, fillZero} = require("./util")
+/* 头部组件，包含新建备忘及排序和过滤功能 */
+class Header extends React.Component {
+	/* 构造函数， */
+	constructor() {
+		super();
+		this.state = this.getInitialValues();
+	}
+	/* 获取输入项的默认值 */
+	getInitialValues() {
+		let now = new Date();
+		// 当前日期
+		let dateStr = `${now.getFullYear()}-${fillZero(now.getMonth() + 1)}-${fillZero(now.getDate())}`;
+		// 当前时间
+		let timeStr = `${fillZero(now.getHours())}:${fillZero(now.getMinutes())}`;
+		return { value: '', date: dateStr, time: timeStr };
+	}
+	/* 备忘内容变更时的处理函数 */
+	handleTextChange(e) { this.setState({ value: e.target.value }); }
+	/* 备忘日期变更时的处理函数 */
+	handleDateChange(e) { this.setState({ date: e.target.value }); }
+	/* 备忘时间变更时的处理函数 */
+	handleTimeChange(e) { this.setState({ time: e.target.value }); }
+	/* 点击添加时的处理函数 */
+	handleAdd() {
+		this.props.onClickAdd(this.state.value, this.state.date, this.state.time);
+		this.setState(this.getInitialValues());
+	}
+	render() {
+		return (
+			&lt;div className="header"&gt;
+				&lt;h3 className="title"&gt;备忘录&lt;/h3&gt;
+				&lt;button type="button" disabled={!this.state.value}
+					onClick={this.handleAdd.bind(this)}&gt;添加&lt;/button&gt;
+				&lt;div className="input-wrapper"&gt;
+					&lt;input value={this.state.value} placeholder="备忘内容"
+						onChange={this.handleTextChange.bind(this)} /&gt;
+					&lt;input className="date" type="date" value={this.state.date}
+						onChange={this.handleDateChange.bind(this)} /&gt;
+					&lt;input className="time" type="time" value={this.state.time}
+						onChange={this.handleTimeChange.bind(this)} /&gt;
+				&lt;/div&gt;
+				&lt;div className="bar"&gt;
+					&lt;strong&gt;排序&lt;/strong&gt;
+					&lt;</span>span onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeOrder('color')}&gt;颜色&lt;/span&gt;
+					&lt;</span>span onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeOrder('time')}&gt;时间&lt;/span&gt;
+					&lt;strong style={{ marginLeft: 20 /* 行内样式 */ }}&gt;过滤&lt;/strong&gt;
+					&lt;</span>span onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeFilter('全部')}&gt;全部&lt;/span&gt;
+					&lt;</span>span onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeFilter('待做')}&gt;待做&lt;/span&gt;
+					&lt;</span>span onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeFilter('已完成')}&gt;已完成&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		);
+	}
+}
+module.exports = Header</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 16 2017 00:28:26 GMT+0800 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

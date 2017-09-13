@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.07% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>20/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">const React = require("react")
+const ReactDOM = require("react-dom")
+const {loadData, saveData, sortArrayByProp, fillZero} = require("./util")
+const Header = require("./header")
+const TodoList = require("./todoList")
+&nbsp;
+/** 备忘录组件 */
+class TodoApp extends React.Component {
+	/** 构造函数，this.state = {...} 相当于getInitialState() */
+	constructor() {
+		super();
+		// 设置初始状态
+		this.state = loadData() || {
+			todos: [],				// 储存备忘列表
+			filter: '全部',		// 储存当前的过滤字段
+			order: 'time'		// 储存当前的排序字段
+		};
+	}
+	/* 添加新备忘的处理函数，向todos列表中插入新数据 */
+	handleAdd(text, date, time) {
+		// setState是异步的，在设置state完成后存储当前的state
+		this.setState({
+			todos: this.state.todos.concat([{
+				color: '#ffffff',
+				text,
+				time: date + ' ' + time,
+				done: false
+			}])
+		}, () =&gt; saveData(this.state));
+	}
+	/* 切换备忘状态的处理函数 */
+	handleToggleState(memo) {
+		memo.done = !memo.done;
+		this.setState({}, () =&gt; saveData(this.state))
+	}
+	/* 切换备忘颜色的处理函数 */
+	handleChangeColor(<span class="fstat-no" title="function not covered" >memo, color) {</span>
+		memo.<span class="cstat-no" title="statement not covered" >color = color;</span>
+		t</span>his.<span class="cstat-no" title="statement not covered" >setState({}, () =&gt; <span class="cstat-no" title="statement not covered" >saveData(this.state))</span>
+	}
+	/* 删除备忘的处理函数，将备忘从todos中移除 */
+	handleDelete(memo) {
+		let todos = this.state.todos;
+		todos.splice(todos.indexOf(memo), 1);
+		this.setState({ todos: todos }, () =&gt; saveData(this.state));
+	}
+	/* 根据指定字段对列表进行排序 */
+	handleChangeOrder(<span class="fstat-no" title="function not covered" >field) {</span>
+		t</span>his.<span class="cstat-no" title="statement not covered" >setState({ order: field }, () =&gt; <span class="cstat-no" title="statement not covered" >saveData(this.state));</span>
+	}
+	/** 根据备忘状态对列表进行过滤 */
+	handleChangeFilter(<span class="fstat-no" title="function not covered" >filter) {</span> t</span>his.<span class="cstat-no" title="statement not covered" >setState({ filter }, () =&gt; <span class="cstat-no" title="statement not covered" >saveData(this.state)); }</span>
+	render() {
+		let filter = this.state.filter;
+		// 先对列表进行过滤，再进行排序
+		let items = sortArrayByProp(this.state.todos.filter(memo =&gt; {
+			r</span>eturn filter === '全部' ? true : <span class="branch-1 cbranch-no" title="branch not covered" >filter === '已完成' ? memo.done : !memo.done;
+		}), this.state.order);
+		return (
+			&lt;div className="todo-app"&gt;
+				&lt;Header onClickAdd={this.handleAdd.bind(this)}
+					onChangeOrder={this.handleChangeOrder.bind(this)}
+					onChangeFilter={this.handleChangeFilter.bind(this)} /&gt;
+				&lt;TodoList title={filter} items={items}
+					onToggleState={this.handleToggleState.bind(this)}
+					onChangeColor={this.handleChangeColor.bind(this)}
+					onDelete={this.handleDelete.bind(this)} /&gt;
+			&lt;/div&gt;
+		);
+	}
+}
+&nbsp;
+module.exports = TodoApp</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Mar 16 2017 00:28:26 GMT+0800 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
