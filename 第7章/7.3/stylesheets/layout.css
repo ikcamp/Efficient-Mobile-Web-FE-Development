@@ -1,0 +1,325 @@
+/* line 1, ../sass/layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* line 7, ../sass/layout.scss */
+.banner {
+  height: 235px;
+  background: url(../images/banner.jpg) center center no-repeat;
+  background-size: 100%;
+}
+
+/* line 12, ../sass/layout.scss */
+a {
+  display: block;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+/* line 17, ../sass/layout.scss */
+img {
+  width: 90%;
+}
+
+/* line 20, ../sass/layout.scss */
+span {
+  color: #828282;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+/* line 41, ../sass/layout.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+/* line 46, ../sass/layout.scss */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 50, ../sass/layout.scss */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* line 53, ../sass/layout.scss */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-1 {
+  float: left;
+  width: 8.33333%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-2 {
+  float: left;
+  width: 16.66667%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-3 {
+  float: left;
+  width: 25%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-4 {
+  float: left;
+  width: 33.33333%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-5 {
+  float: left;
+  width: 41.66667%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-6 {
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-7 {
+  float: left;
+  width: 58.33333%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-8 {
+  float: left;
+  width: 66.66667%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-9 {
+  float: left;
+  width: 75%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-10 {
+  float: left;
+  width: 83.33333%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-11 {
+  float: left;
+  width: 91.66667%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+/* line 58, ../sass/layout.scss */
+.col-xs-12 {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 414px) {
+  /* line 65, ../sass/layout.scss */
+  .col-sm-1 {
+    float: left;
+    width: 8.33333%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-2 {
+    float: left;
+    width: 16.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-3 {
+    float: left;
+    width: 25%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-4 {
+    float: left;
+    width: 33.33333%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-5 {
+    float: left;
+    width: 41.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-6 {
+    float: left;
+    width: 50%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-7 {
+    float: left;
+    width: 58.33333%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-8 {
+    float: left;
+    width: 66.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-9 {
+    float: left;
+    width: 75%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-10 {
+    float: left;
+    width: 83.33333%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-11 {
+    float: left;
+    width: 91.66667%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  /* line 65, ../sass/layout.scss */
+  .col-sm-12 {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,92 @@
+body{
+    /* 整体设置为flex布局 */
+    display: flex;
+    /* 设置子项的排列方向为垂直排列 */
+    flex-flow: column;   
+    margin: 0;
+    padding: 0;
+    /* 设置最小高度 */
+    min-height: 100vh;
+    font-size: 2em;
+}
+
+.container{
+    /* 上部主容器自适应高度 */
+    flex: 1;
+    /* 主容器内部业采用flex布局，实现导航，内容主体和侧边栏的布局 */
+    display: flex;
+}
+
+footer{
+    /* 固定底部高度 */
+    height: 40px;
+    background: slategray;
+    text-align: center;
+}
+
+main{
+    background: gray;
+}
+
+
+nav{
+    background: lightgray;
+}
+
+aside{
+    background: darkgray;
+}
+
+.side1, .side2{
+    height: 200px; border:1px solid gray;
+}
+
+.block1, .block2{
+    height: 300px; border-bottom:1px solid #fff;
+}
+
+nav, aside{
+    /* 导航和侧边栏固定宽度 */
+    width:200px;
+    min-width: 200px;
+    max-width: 200px;
+    height: auto;
+}
+
+main{
+    /* 内容自适应宽度 */
+    flex: 1;
+}
+
+
+@media (max-width:1000px){
+    /* 在屏幕宽度不大于1000px时，隐藏侧边栏 */
+    aside{
+        display: none;
+    }
+}
+
+/* 在屏幕宽度不大于768px时 */
+@media(max-width:768px){
+    /* 设置排列方式为垂直排列 */
+    .container{
+        flex-direction: column;
+    }
+    /* 覆盖前面定义的侧边栏和导航栏的宽度，设置为屏幕宽度 */
+    nav, aside{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    /* 覆盖在前一个@media中隐藏的侧边栏设置 */
+    aside{
+        display: block;
+    }
+    /* 垂直排列之后，手动设置主题内容的高度 */
+    main{
+        min-width: 90vh;
+        height: 90vh;
+    }
+}
+
+

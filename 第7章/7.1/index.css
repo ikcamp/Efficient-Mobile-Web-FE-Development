@@ -1,0 +1,248 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #035f40;
+}
+
+.wrap {
+  width: 320px;
+
+  transform-origin: 0 0;
+}
+
+.top-layer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 50px;
+
+  transform-origin: 0 0;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.left-desc {
+  display: block;
+
+  width: 42px;
+  margin: 4px 0 0 14px;
+
+  text-indent: -9999px;
+}
+
+.mid-title {
+  display: block;
+
+  box-sizing: content-box;
+  width: 192px;
+  height: 24px;
+  margin: 12px 8px 0;
+
+  line-height: 24px;
+
+  text-align: center;
+
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  background-color: #edaa39;
+}
+
+.mid-title .login {
+  font-size: 13px;
+}
+
+.mid-title p {
+  font-size: 10px;
+  line-height: 11px;
+}
+
+.mid-title p span:first-child {
+  display: inline-block;
+  overflow: hidden;
+
+  max-width: 70%;
+  margin-right: 5px;
+
+  vertical-align: top;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mid-title p .exit {
+  font-size: 9px;
+}
+
+.right-award {
+  display: block;
+
+  width: 49px;
+  margin-right: 8px;
+
+  text-indent: -9999px;
+}
+
+footer {
+  margin: 0 18px;
+  padding: 10px 0 30px;
+
+  font-size: 7px;
+
+  color: #99cfbd;
+}
+
+.main .main-bg {
+  width: 320px;
+  height: 470px;
+
+  background: url('../images/main.jpg') no-repeat;
+  background-size: 100%;
+}
+
+.main .main-bg .icon-button {
+  position: absolute;
+
+  width: 53px;
+  height: 53px;
+}
+
+.main .main-bg .icon-money {
+  position: relative;
+
+  height: 30px;
+}
+
+.main .main-bg .icon-leave {
+  top: 300px;
+  left: 88px;
+}
+
+.main .main-bg .icon-leave .money-min {
+  top: -16px;
+  left: -45px;
+
+  width: 55px;
+}
+
+.main .main-bg .icon-flower {
+  top: 300px;
+  left: 182px;
+}
+
+.main .main-bg .icon-flower .money-small {
+  top: -16px;
+  left: 30px;
+
+  width: 64px;
+}
+
+.main .main-bg .icon-star {
+  top: 360px;
+  left: 30px;
+}
+
+.main .main-bg .icon-star .money-mid {
+  top: -25px;
+  left: -28px;
+
+  width: 66px;
+}
+
+.main .main-bg .icon-moon {
+  top: 389px;
+  left: 134px;
+}
+
+.main .main-bg .icon-moon .money-large {
+  top: -28px;
+  left: -20px;
+
+  width: 78px;
+}
+
+.main .main-bg .icon-sun {
+  top: 360px;
+  right: 30px;
+}
+
+.main .main-bg .icon-sun .money-max {
+  top: -18px;
+  left: -2px;
+
+  width: 85px;
+}
+
+.main .banner {
+  height: 60px;
+  margin-top: -20px;
+  padding-top: 9px;
+
+  background: url('../images/award-user.png') no-repeat;
+  background-size: 100%;
+}
+
+.main .banner .lucky-info {
+  clear: both;
+  overflow: hidden;
+
+  width: 210px;
+  height: 30px;
+  margin-left: 110px;
+}
+
+.main .banner .lucky-info ul {
+  transition: transform 500ms linear;
+  transform: translateZ(0);
+}
+
+.main .banner .lucky-info li {
+  margin: 4px 0;
+
+  font-size: 9px;
+  line-height: 9px;
+
+  color: #fff;
+}
+
+.main .banner .lucky-info li span {
+  margin-right: 10px;
+}
+
+.gray-leave,
+.gray-flower,
+.gray-star,
+.gray-moon,
+.gray-sun {
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (max-width: 320px) {
+  .main-bg {
+    width: 320px;
+    height: 470px;
+  }
+}
+@media (min-width: 321px) and (max-width: 639px) {
+  .main-bg {
+    width: 480px;
+    height: 705px;
+  }
+}
+@media (min-width: 640px) {
+  .main-bg {
+    width: 640px;
+    height: 940px;
+  }
+}

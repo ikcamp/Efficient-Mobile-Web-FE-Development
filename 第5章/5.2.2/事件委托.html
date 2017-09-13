@@ -1,0 +1,36 @@
+﻿<html style="font-size:41.4px">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<style type="text/css">
+</style>
+</head>
+<body>
+<a>link</a>
+<b>bold</b>
+<i>italic</i>
+<script type="text/javascript">
+	function showMe(ev) { 
+		alert(ev.target.tagName);
+	}
+	document.querySelector('body').addEventListener('click', showMe, false);
+</script>
+<script>
+	var touch0 = null;
+	document.body.addEventListener('touchstart', function (ev) {
+		touch0 = ev.touches[0];
+		console.log('touchstart');console.log(ev)
+	});
+	document.body.addEventListener('touchmove', function (ev) {
+		var touch = ev.touches[0];
+		var moveX = touch.clientX - touch0.clientX;
+		var moveY = touch.clientY - touch0.clientY;
+		console.log('move:', moveX, moveY);
+	});
+
+	window.addEventListener("deviceorientation", function (ev) {
+		// 处理event.alpha、event.beta及event.gamma
+		console.log(ev);
+	}, true);
+</script>
+</body>
+</html>

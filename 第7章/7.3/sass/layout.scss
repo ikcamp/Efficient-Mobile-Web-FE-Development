@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.banner{
+    height: 235px;
+    background: url(../images/banner.jpg) center center no-repeat;
+    background-size: 100%;
+}
+a {
+    display: block;
+    text-align: center;
+    padding: 20px 0 10px;
+}
+img {
+    width: 90%;
+}
+span {
+    color: #828282;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+}
+
+@mixin clearfix() {
+    content: "";
+    display: table;
+    clear: both;
+}
+@mixin col($i) {
+    float: left;
+    width: percentage($i / 12);
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    &::after {
+        @include clearfix;
+    }
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    &::after {
+        @include clearfix;
+    }
+}
+@for $i from 1 through 12 {
+    .col-xs-#{$i} {
+        @include col($i);
+    }
+}
+
+@media (min-width: 414px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+        @include col($i);
+     }
+    }  
+}
+

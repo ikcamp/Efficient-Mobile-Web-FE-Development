@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中</title>
+	<style type="text/css">
+		.main {
+			width: 320px;
+			height: 768px;
+			margin: 0 auto;
+		}
+		.item {
+			position: relative;
+			font-family: sans-serif;
+			float: left;
+			margin-right: 10px;
+		}
+		.icon-password {
+			background: url(./images/icon-password.png) center center no-repeat;
+		}
+		.icon-list {
+			background: url(./images/icon-list.png) center center no-repeat;
+		}
+		.icon-setting {
+			background: url(./images/icon-setting.png) center center no-repeat;
+		}
+		.icon-user {
+			background: url(./images/icon-user.png) center center no-repeat;
+		}
+		.icon {
+			display: block;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #999;
+			border-radius: 50%;
+			background-size: 50% 50%;
+		}
+		.content {
+			display: none;
+			position: absolute;
+			top: 45px;
+			left: 50%;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			white-space: nowrap;
+			padding: 4px;
+			transform: translateX(-50%);
+		}
+		.item:hover .content{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="item">
+			<i class="icon icon-password"></i>
+			<div class="content">修改密码</div>
+		</div>
+		<div class="item">
+			<i class="icon icon-user"></i>
+			<div class="content">修改身份信息</div>
+		</div>
+		<div class="item">
+			<i class="icon icon-setting"></i>
+			<div class="content">设置</div>
+		</div>
+		<div class="item">
+			<i class="icon icon-list"></i>
+			<div class="content">我的订单</div>
+		</div>
+	</div>
+</body>
+</html>
