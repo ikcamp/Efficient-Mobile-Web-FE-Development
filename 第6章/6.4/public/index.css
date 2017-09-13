@@ -1,0 +1,33 @@
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.row {
+    margin: 20px 0px;
+}
+.file {
+    position: relative;
+    background: #D0EEFF;
+    color: #1E88C7;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    text-decoration: none;
+    overflow: hidden;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+}
+.file input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+.image {
+    display: none;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}

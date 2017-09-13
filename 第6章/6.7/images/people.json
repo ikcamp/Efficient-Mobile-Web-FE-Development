@@ -1,0 +1,54 @@
+{
+  "frames": {
+    "people-1.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      }
+    },
+    "people-2.png": {
+      "frame": {
+        "x": 220,
+        "y": 0,
+        "w": 220,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 220,
+        "h": 220
+      }
+    }
+  },
+  "meta": {
+    "app": "",
+    "version": "1.0",
+    "image": "people.png",
+    "size": {
+      "w": 440,
+      "h": 220
+    },
+    "scale": "1"
+  }
+}

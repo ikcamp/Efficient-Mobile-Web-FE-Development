@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+<style type="text/css">
+	/* 设置播放器按钮容器样式 */
+	.ctl { width:600px; text-align:center; background:#eee; padding:4px 0; }
+	/* 设置播放器按钮样式 */
+	.ctl input { padding:4px 20px; }
+	/* 设置字幕样式：透明、黑色、阴影、40像素大 */
+	video::cue { background:transparent; color: black; text-shadow: 1px 1px 2px #fff; font-size:40px; }
+	/* 设置字幕中加粗的部分为黄色 */
+	video::cue(b) { color: yellow; }
+</style>
+</head>
+<body>
+<!-- 定义一个video元素，用于播放视频 -->
+<video width="600" poster="coverimg.jpg">
+	<!-- 指定视频格式和视频地址 -->
+	<source type="video/mp4" src="http://f6.c.hjfile.cn/qiniu/classzt/20160803/90614_video_2.mp4" />
+	<!-- 指定视频字幕 -->
+	<track kind="subtitles" src="webvtt.vtt" default />
+</video>
+<!-- 定义按钮容器和3个控制按钮 -->
+<div class="ctl">
+	<input type="button" value="播放" />
+	<input type="button" value="快进(x1)" />
+	<input type="button" value="静音" />
+</div>
+<script type="text/javascript">
+// 获取播放器元素
+var vd = document.querySelector('video');
+// 获取播放器的所有控制按钮
+var btns = document.querySelectorAll('.ctl input');
+// 为“播放”按钮添加点击事件
+btns[0].onclick = function () { 
+	if (vd.paused) {
+		vd.play();
+		this.value = '暂停';
+	} else {
+		vd.pause();
+		this.value = '播放';
+	}
+};
+// 为“快进”按钮添加点击事件
+btns[1].onclick = function () { 
+	if (vd.playbackRate >= 8) vd.playbackRate = 1;
+	else vd.playbackRate *= 2;
+	this.value = '快进(x' + vd.playbackRate + ')';
+};
+// 为“静音”按钮添加点击事件
+btns[2].onclick = function () { 
+	vd.muted = !vd.muted;
+	this.value = vd.muted ? '取消静音' : '静音';
+};
+</script>
+</body>
+</html>

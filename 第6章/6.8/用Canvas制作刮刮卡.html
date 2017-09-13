@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 设置视口宽度、初始缩放 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>刮刮卡</title>
+		<style type="text/css">
+		/* 设置容器的大小和位置 */
+		.container{
+			width:320px;
+			margin:10px auto 20px auto;
+			min-height:300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<canvas></canvas>
+		</div>
+		<script type="text/javascript">
+			var bodyStyle = document.body.style;
+			bodyStyle.mozUserSelect = 'none';
+			bodyStyle.webkitUserSelect = 'none';
+
+			/* 实例化一个图片类 */
+			var img = new Image();
+			/* 拿到canvas的DOM对象 */
+			var canvas = document.querySelector('canvas');
+			/* canvas的背景为透明 */
+			canvas.style.backgroundColor='transparent';
+			/* canvas的定位方式为绝对定位 */
+			canvas.style.position = 'absolute';
+			/* 中奖和未中奖两个图片 */
+			var imgs = ['bg_01.jpg','bg_02.jpg'];
+			/* 随机生成0或1 */
+			var num = Math.floor(Math.random()*2);
+			/* 图片的实例对象设置图像url */
+			img.src = imgs[num];
+
+			img.addEventListener('load', function(e) {
+				var ctx;
+				var w = img.width,				/* 获取图片宽度 */
+					h = img.height;				/* 获取图片高度 */
+				var offsetX = canvas.offsetLeft,/* 获取canvas相对于左边界的偏移 */
+					offsetY = canvas.offsetTop;	/* 获取canvas相对于上边界的偏移 */
+				var mousedown = false;			/* 防止手势操作滑出手机边界 */
+				function layer(ctx) {			/* 绘制蒙层 */
+					ctx.fillStyle = 'gray';		/* 蒙层颜色 */
+					ctx.fillRect(0, 0, w, h);	/* 蒙层的位置和大小 */
+				}
+				/* 鼠标或者手势按下时触发的事件回调 */
+				function eventDown(e){
+					e.preventDefault();
+					mousedown = true;
+				}
+				/* 鼠标或者手势松开时触发的事件回调 */
+				function eventUp(e){
+					e.preventDefault();
+					mousedown = false;
+				}
+				/* 鼠标或者手势移动时触发的事件回调 */
+				function eventMove(e){
+					e.preventDefault();
+					if(mousedown) {
+						/* 拿到TouchList对象中最后一个事件对象 */
+						if(e.changedTouches){
+							e = e.changedTouches[e.changedTouches.length-1];
+						}
+						/* 获得当前鼠标或者手势的坐标 */
+						var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,
+						y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;
+						/* 创建一个新的路径 */
+						ctx.beginPath();
+						/* 绘制弧线 */
+						ctx.arc(x, y, 20, 0, Math.PI * 2);
+						/* 填充路径 */
+						ctx.fill();
+					}
+				}
+				/* 设置宽度 */
+				canvas.width = w;
+				/* 设置高度 */
+				canvas.height = h;
+				/* 设置背景 */
+				canvas.style.backgroundImage = 'url('+img.src+')';
+				/*返回canvas 的上下文 */
+				ctx = canvas.getContext('2d');
+				/* 填充背景色为透明 */
+				ctx.fillStyle = 'transparent';
+				/* 填充的位置和长宽 */
+				ctx.fillRect(0, 0, w, h);
+				/* 绘制蒙层 */
+				layer(ctx);
+				/* 路径与原图像重叠部分透明 */
+				ctx.globalCompositeOperation = 'destination-out';
+				canvas.addEventListener('touchstart', eventDown);
+				canvas.addEventListener('touchend', eventUp);
+				canvas.addEventListener('touchmove', eventMove);
+				canvas.addEventListener('mousedown', eventDown);
+				canvas.addEventListener('mouseup', eventUp);
+				canvas.addEventListener('mousemove', eventMove);
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "fileupload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.0.17",
+    "node-static": "^0.7.9"
+  }
+}

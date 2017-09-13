@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles/panorama.css" type="text/css"/>
+</head>
+<body>
+
+<div class="scene"> 
+	<div class="container">
+		<div class="cube">
+			<img src="images/front.png" class="face front">
+			<img src="images/back.png" id="cube-bottom" class="face back">
+			<img src="images/left.png" id="cube-left" class="face left">
+			<img src="images/right.png" id="cube-right" class="face right">
+			<img src="images/top.png" id="cube-front" class="face top">
+			<img src="images/bottom.png" id="cube-back" class="face bottom">
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	(function() {
+		var speed = 100;
+		var cube = document.getElementsByClassName('cube')[0]; 		// 保存cube的dom
+		// 分辨存储touchstart 的偏移值和touchmove 的偏移值
+		var lastPosX, lastPosY, curPosX, curPosY;
+		document.addEventListener('touchstart', function(e) {
+			lastPosX = e.touches[0].pageX;						// 获取初始在X轴的偏移
+			lastPosY = e.touches[0].pageY;						// 获取初始在Y轴的偏移
+		})
+		document.addEventListener('touchmove', function(e) {
+			curPosX = e.touches[0].pageX;
+			curPosY = e.touches[0].pageY;
+			valLR = -1 * speed * (curPosX - lastPosX) / 360;
+			valTB = speed * (curPosY - lastPosY) / 360;
+			value = 'rotateX(' + valTB + 'deg) rotateY(' + valLR + 'deg)';
+			cube.style.transform = value;
+		})
+
+	})()
+</script>
+</body>
+</html>

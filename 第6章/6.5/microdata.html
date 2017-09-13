@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+</head>
+<body>
+<!-- 定义一个商品的容器，并指定Microdata的作用范围 -->
+<div itemscope itemtype="http://schema.org/Product">
+	<!-- 商品图片，应用Microdata的image属性 -->
+	<img itemprop="image" src="http://pic.qiantucdn.com/01/37/07/67bOOOPICff.jpg" />
+	<!-- 商品名称，应用Microdata的name属性 -->
+	<p itemprop="name">大学英语四级口语特训班</p>
+	<!-- 商品描述，应用Microdata的description属性 -->
+	<p itemprop="description">沪江亲情奉献【1元抢折上减100元抵用券】十五年老校医帮你把脉口语考试，包你药到病除。</p>
+	<!-- 商品评价，应用Microdata的aggregateRating属性，并为评价的子元素指定新的范围 -->
+	<div itemprop="aggregateRating" 
+		 itemscope itemtype="http://schema.org/AggregateRating">
+		<span itemprop="ratingValue">4.8</span>		<!-- 平均分数 -->
+		<span itemprop="ratingCount">566</span>		<!-- 评价总数 -->
+	</div>
+</div>
+</body>
+</html>

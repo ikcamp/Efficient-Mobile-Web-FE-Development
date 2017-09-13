@@ -1,0 +1,71 @@
+body { background-color: #eeeeee; }
+
+.scene { 
+	position: relative;
+	perspective: 600px
+}
+
+.container {
+	position: relative;
+	transform-style: preserve-3d;
+	transform: translateZ(300px);
+}
+
+
+.cube { 
+	position: relative; 
+	width: 0; 
+	height: 0; 
+	top: 0px; 
+	margin: 0 auto; 
+	-webkit-transform-style: preserve-3d; 
+} 
+
+.cube img {
+	width: 600px;
+	height: 600px;
+	border-style: solid;
+	border-color: #ff0000;
+}
+
+.face { 
+	display: block; 
+	height: 600px; 
+	position: absolute; 
+	left: -300px; 
+	top: -200px;
+	width: 600px;
+	backface-visibility: hidden; 
+}
+ 
+.top { 
+	-webkit-transform: translate3d(0, -300px, 0) rotate3d(1, 0, 0, -90deg) rotate3d(0, 0, 1, 90deg); 
+} 
+ 
+.bottom { 
+	-webkit-transform: translate3d(0, 300px, 0) rotate3d(1, 0, 0, 90deg) rotate3d(0, 0, 1, -90deg); 
+}
+
+.front { 
+	-webkit-transform: translate3d(0, 0, 300px) rotate3d(0, 1, 0, 180deg); 
+} 
+ 
+.back { 
+	-webkit-transform: translate3d(0, 0, -300px); 
+} 
+
+.left { 
+	-webkit-transform: translate3d(-300px, 0, 0) rotate3d(0, 1, 0, 90deg); 
+} 
+ 
+.right { 
+	-webkit-transform: translate3d(300px, 0, 0) rotate3d(0, 1, 0, -90deg); 
+} 
+
+
+
+
+
+
+ 
+
