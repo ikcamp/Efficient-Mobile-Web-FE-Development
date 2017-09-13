@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="coordtransform.js"></script>
+        <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3f01aac525e232b53ecb730077dc588f"></script>
+        <style>
+            body{
+                height:100vh;
+                margin: 0;
+                padding: 0;
+                flex-direction:column;
+            }
+            #map{
+                height: 90vh;
+            }
+            header{
+                padding: 0.5em;
+                height: 10vh;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 控制记录轨迹的按钮 -->
+        <header>
+            <button id="btnStart">开始记录</button>
+            <button id="btnStop">停止记录</button>
+        </header>
+        <!-- 地图容器 -->
+        <div id="map"></div>
+        <!--页面渲染地图脚本-->
+        <script type="text/javascript" src="geo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.row {
+    margin: 20px 0px;
+}
+.name {
+    color: #004974;
+}
+.chat {
+    border: 1px solid #99D3F5;
+    border-radius: 2px;
+    padding: 20px;
+    margin: 10px 0px;
+}
+.user {
+    color: #1E88C7;
+}
+.message {
+    margin: 5px 0px 10px 20px;
+}
+.typed-message {
+    width: 200px;
+    height: 30px;
+    border: 1px solid green;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.send-message {
+    height: 34px;
+    width: 70px;
+    border: 1px solid green;
+    border-radius: 4px;
+    margin-left: 20px;
+    vertical-align: middle;
+}

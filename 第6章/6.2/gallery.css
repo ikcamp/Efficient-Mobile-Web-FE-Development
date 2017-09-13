@@ -1,0 +1,51 @@
+body, div{
+    margin: 0; padding: 0;
+}
+
+.gallery{
+    /* 设置设置相册的宽度为屏幕宽度 */
+    width:100vw;
+    /* 相册采用flex布局 */
+    display: flex;
+    /* 相册每一项为横向排列，并且换行 */
+    flex-flow: row wrap;
+}
+
+.gallery .item{
+    /* 每一项平均排列 */
+    flex: 1;
+}
+
+.gallery .item img{
+    /* 图片宽度设置为1/3屏幕宽度 */
+    width:33vw;
+}
+
+.gallery.preview{
+    touch-action: none;
+}
+
+.gallery.animation{
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.gallery.preview .item{
+    /* 对子项设置为flex布局 */
+    display: flex;
+    /* 设置margin为auto实现图片居中显示 */
+    margin: auto;
+    background-color: gray;
+}
+
+.gallery.preview .item img {
+    /* 设置预览图片的最大宽度为屏幕宽度 */
+    max-width: 100vw;
+    /* 设置预览图片的最大高度为屏幕高度 */
+    max-height: 100vh;
+    /* 初始化图片宽度，覆盖之前设置的宽度 */
+    width: initial;
+}
+
