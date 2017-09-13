@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="dist/latest/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航部分 -->
+    <nav>
+        <div class="buttons">
+            <a class="icon icon-add" href="#"></a>
+        </div>
+        <div class="list-container">
+            <ul class="list">
+            </ul>
+        </div>
+    </nav>
+    <!-- 编辑器部分 -->
+    <main>
+        <!-- 编辑区域 -->
+        <div class="editor">
+            <div class="title">
+                <input type="text" name="title" value="" placeholder="请输入标题" id="tbTitle" />
+            </div>
+            <div class="md-editor">
+                <textarea placeholder="请输入markdown" id="tbMarkdown"></textarea>
+            </div>
+        </div>
+        <!-- 预览区域 -->
+        <div class="preview-container">
+            <div class="preview markdown-body" id="preview">
+
+            </div>
+            <div class="buttons">
+                <div href="#" id='btnSave' class="btn-save">保存</div>
+            </div>
+        </div>
+    </main>
+    <script src="external/showdown.js"></script>
+    <script src="dist/latest/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+.big-img-box {
+    width:1200px;
+    height:800px;
+    margin:10px auto;
+    text-align:center;
+    border:solid 1px gray;
+}
+.big-img { 
+    max-width:1200px;
+    height:800px;
+}
+.small-img-box { 
+    width:1200px;
+    margin:0 auto;
+    background:gray;
+    font-size:0;
+}
+.small-img-box img { 
+    width:200px;
+    height:120px;
+    margin:20px;
+    border-radius:10px;
+}
+.small-img-box .hover>img { 
+    box-shadow:white 0 0 20px;
+}

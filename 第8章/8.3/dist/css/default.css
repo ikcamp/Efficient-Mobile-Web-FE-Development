@@ -1,0 +1,87 @@
+body, div, main, nav, ul, li {
+  padding: 0;
+  margin: 0; }
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 90vh; }
+
+nav {
+  border: 1px solid lightgray;
+  padding: 1em; }
+  nav .buttons {
+    float: right;
+    padding: 1em 0; }
+    nav .buttons .icon-add {
+      margin-right: 0.8em;
+      display: block; }
+  nav .list {
+    clear: both; }
+    nav .list li {
+      margin: 5px 0;
+      display: flex;
+      list-style: none; }
+      nav .list li.active {
+        border: 1px solid lightgray; }
+      nav .list li a.title {
+        height: 32px;
+        line-height: 32px;
+        width: 160px;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      nav .list li .btn-delete {
+        margin: 0 1em; }
+
+main {
+  flex: 1; }
+
+.editor, .preview-container {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+  padding: 1em;
+  border: 1px dashed lightgray; }
+
+.editor {
+  display: flex;
+  flex-direction: column; }
+  .editor .title {
+    width: 100%;
+    display: flex; }
+    .editor .title input {
+      font-size: 16px;
+      padding: 1em 2em;
+      flex: 1; }
+  .editor .md-editor {
+    flex: 1;
+    margin-top: 1em;
+    display: flex; }
+    .editor .md-editor textarea {
+      font-size: 16px;
+      flex: 1;
+      line-height: 1.5em;
+      padding: 1em 2em;
+      border: 1px solid lightgray; }
+
+.preview-container {
+  display: flex;
+  padding-bottom: 0;
+  flex-direction: column; }
+  .preview-container .preview {
+    padding: 0 1em;
+    flex: 1;
+    border: 1px solid lightgray;
+    overflow: auto;
+    line-height: 1.5em; }
+  .preview-container .buttons {
+    padding: 1em 0; }
+    .preview-container .buttons .btn-save {
+      float: right;
+      padding: 1em 2em;
+      border-radius: 0.5em;
+      background: lightgreen;
+      border: none;
+      cursor: pointer; }
