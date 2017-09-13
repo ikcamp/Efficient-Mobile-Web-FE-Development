@@ -1,0 +1,14 @@
+﻿<html>
+<head>
+<style type="text/css">
+.img { position:fixed; top:-400px; }		/* 设置图片初始位置 */
+.img { transition:top ease 1s; }		/* 设置图片过渡效果 */
+.img.show { top:20px; }					/* 设置图片展示后的位置 */
+</style>
+</head>
+<!-- 在页面加载后对img应用新的样式 -->
+<body onload="document.querySelector('.img').className+=' show'">
+	<!-- 定义一张默认隐藏的图片 -->
+	<img class="img" src="http://pic.qiantucdn.com/01/37/07/67bOOOPICff.jpg" width="500" />
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+<!-- 设置viewport为设备宽度 -->
+<meta name="viewport" content="width=device-width" />
+<style type="text/css">
+	/* 设置页面基础字号，并清除页面的默认边距 */
+	body { font-size:12px; margin:0; }
+	/* 设置容器宽度，并居中显示 */
+	.btns { width:10rem; margin:0 auto; }
+	/* 定义每个按钮的样式 */
+	.btns > a { float:left; width:2.5rem; text-align:center; padding-top:0.2rem; }
+	/* 定义按钮的子元素圆 */
+	.btns > a > i { display: inline-block; width: 1.2rem; height: 1.2rem; background: gray; border-radius: 50%; }
+	/* 定义按钮文字样式 */
+	.btns > a > span { display:block; line-height:0.8rem; font-size:14px; }
+</style>
+<script>
+	(function () { 
+		// 获取根元素对象，既HTML
+		var de = document.documentElement;
+		// 重置根元素的字号大小
+		function resetFontSize() {
+			// 获取浏览器宽度
+			var w = de.getBoundingClientRect().width;
+			// 设置一个最大宽度，避免在iPad等设备下过渡放大
+			if (w > 640) w = 640;
+			// 为根元素字号赋值
+			de.style.fontSize = (w / 10) + 'px';
+		}
+		// 页面一加载就为根元素字号赋值
+		resetFontSize();
+		// 页面大小改变时，重新设置根元素字号
+		window.addEventListener('resize', resetFontSize, false);
+	})();
+</script>
+</head>
+<body>
+	<!-- 定义按钮容器和8个按钮元素 -->
+	<div class="btns">
+		<a><i></i><span>英语</span></a>
+		<a><i></i><span>日语</span></a>
+		<a><i></i><span>韩语</span></a>
+		<a><i></i><span>小语种</span></a>
+		<a><i></i><span>留学</span></a>
+		<a><i></i><span>职场</span></a>
+		<a><i></i><span>中小幼</span></a>
+		<a><i></i><span>全部分类</span></a>
+	</div>
+</body>
+</html>

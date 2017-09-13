@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<style type="text/css">
+			.square-01,.square-02,.square-03 {
+				color: #fff;
+				text-align: center;
+				line-height: 100px;
+				float: left;
+				margin-right: 10px;
+				padding: 10px;
+				width: 150px;           /*元素的宽度*/
+				height: 100px;			/*元素的高度*/
+				border: 10px dashed #333; /*元素的边框*/
+				background-position: 0 0;
+				background-color: gray;
+				background-image: url('./square.png');
+				background-repeat: no-repeat;
+			}
+			.square-01 {
+				background-origin: padding-box;
+				-webkit-background-origin: padding-box;
+			}
+			.square-02 {
+				background-origin: border-box;
+				-webkit-background-origin: border-box;
+			}
+			.square-03 {
+				background-origin: content-box;
+				-webkit-background-origin: content-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="square-01">padding-box</div>
+		<div class="square-02">border-box</div>
+		<div class="square-03">content-box</div>
+	</body>
+</html>

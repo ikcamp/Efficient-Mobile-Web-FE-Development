@@ -1,0 +1,30 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/Utilities";
+@import "compass/typography/links";
+
+.rounded {
+	@include border-radius(5px);
+}
+
+.stretch-full {
+	@include stretch();
+}
+
+#footer {
+	@include sticky-footer(40px);
+}
+
+a {
+	@include link-colors(#333, #999, #44b336, #44b336 – #111, #44b336 + #111);
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+
+
+
+

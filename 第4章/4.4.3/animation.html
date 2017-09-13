@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+<style type="text/css">
+.img { position:fixed; top:-400px; width:500px; }		/* 设置容器样式 */
+.img.show { animation:move 2s ease 1 normal; }			/* 设置图片动画效果 */
+@keyframes move {			/* 设置动画效果中的关键帧 */
+	0% { top:-400px; }		/* 定义动画的初始状态 */
+	50% { top:20px; }		/* 下落到页面中间 */
+	100% { width:1000px; }	/* 将图片放大 */
+}
+</style>
+</head>
+<!-- 在页面加载后对img应用新的样式 -->
+<body onload="document.querySelector('.img').className+=' show'">
+	<!-- 定义一张默认隐藏的图片 -->
+	<img class="img" src="http://pic.qiantucdn.com/01/37/07/67bOOOPICff.jpg" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<style>
+.container{								/* container样式 */
+		width: 200px;
+		height: 200px;					/* 值发生变化时，整个布局保持不变 */
+		background: green;
+}
+.header{								/* header样式 */
+		background: red;
+		height: 50px;
+}
+.content{								/* container样式 */
+		background: blue;
+		height: calc(100% - 50px);
+}
+</style>
+<div class="container">					<!-- container容器 -->
+	<div class="header"></div>			<!-- header容器 -->
+	<div class="content"></div>			<!-- content容器 -->
+</div>
+</html>

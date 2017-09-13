@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<style type="text/css">
+			.square-01,.square-02,.square-03 {
+				color: #000;
+				text-align: center;
+				line-height: 100px;
+				float: left;
+				margin-right: 10px;
+				padding: 10px;
+				width: 150px;           /*元素的宽度*/
+				height: 100px;			/*元素的高度*/
+				border: 10px dashed #333; /*元素的边框*/
+				background-color: yellow;
+			}
+			.square-01 {
+				background-clip: padding-box;
+				-webkit-background-clip: padding-box;
+			}
+			.square-02 {
+				background-clip: border-box;
+				-webkit-background-clip: border-box;
+			}
+			.square-03 {
+				background-clip: content-box;
+				-webkit-background-clip: content-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="square-01">padding-box</div>
+		<div class="square-02">border-box</div>
+		<div class="square-03">content-box</div>
+	</body>
+</html>

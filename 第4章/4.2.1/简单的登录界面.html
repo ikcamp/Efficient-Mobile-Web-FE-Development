@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <title>常见选择器</title>
+	<style>
+		* { margin: 0; padding: 0; }				/* 外边距、内边距 */
+		body { background: #F0F0F0; }			/* 背景颜色 */
+		header {
+			height: 48px;					/* 高度 */
+			line-height: 48px;				/* 行高 */
+			background: #2e353d;			/* 背景色 */
+			color: white;					/* 字体颜色 */
+			font-size: 16px;					/* 字号 */
+			text-align: center;				/* 文字水平居中 */
+		}
+		header+#content { margin-top: 20px }	/* 上边距 */
+		#content { padding: 10px; }
+		input, button { width: 100%; }
+		input[type="text"], input[type="password"] {
+			height: 35px;
+			margin-top: 10px;
+		}
+		button { height: 30px; margin-top: 20px; }
+	</style>
+</head>
+<body>
+	<header>用户登录</header>						<!-- 标题 -->
+	<div id="content">								<!-- 内容容器 -->
+		<input type="text" value="tom"><br>				<!-- 用户名输入框 -->
+		<input type="password" value="123456">			<!-- 密码输入框 -->
+		<button>登录</button>						<!-- 登录按钮 -->
+	</div>
+</body>

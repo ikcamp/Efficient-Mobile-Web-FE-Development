@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>gradient</title>
+	<style type="text/css">
+		.square {
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			float: left;
+			margin-right: 10px;
+		}
+		.gradient0 {
+			background: linear-gradient(#ccc, #000);
+			background: -moz-linear-gradient(#ccc, #000);
+			background: -webkit-linear-gradient(#ccc,#000);
+			background: -o-linear-gradient(#ccc, #000);
+		}
+		.gradient1 {
+			background: linear-gradient(0deg,#ccc, #000);
+			background: -moz-linear-gradient(0deg, #ccc, #000);
+			background: -webkit-linear-gradient(0deg,#ccc,#000);
+			background: -o-linear-gradient(0deg, #ccc, #000);
+		}
+		.gradient2 {
+			background: radial-gradient(#ccc, #666, #000);
+			background: -moz-radial-gradient(#ccc, #666, #000);
+ 			background: -webkit-radial-gradient(#ccc, #666, #000);
+ 			background: -o-radial-gradient(#ccc, #666, #000);
+		}
+		.gradient3 {
+			background: radial-gradient(bottom left, circle, #ccc, #666, #999);
+			background: -moz-radial-gradient(bottom left, circle, #ccc, #666, #000);
+  			background: -webkit-radial-gradient(bottom left, circle, #ccc, #666, #999);
+  			background: -o-radial-gradient(bottom left, circle, #ccc, #666, #999);
+
+		}
+	</style>
+</head>
+<body>
+	<div class="square gradient0">线性渐变</div>
+	<div class="square gradient1">线性渐变</div>
+	<div class="square gradient2">径向渐变</div>
+	<div class="square gradient3">径向渐变</div>
+</body>
+</html>

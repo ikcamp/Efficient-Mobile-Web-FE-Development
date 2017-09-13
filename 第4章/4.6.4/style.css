@@ -1,0 +1,39 @@
+p.foo {
+  border-color: #44b336; }
+
+div {
+  zoom: 1; }
+  div:before, div:after {
+    content: "";
+    display: table; }
+  div:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0; }
+
+#sidebar {
+  width: 240px; }
+
+p {
+  color: green; }
+
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.2em; }
+
+/*# sourceMappingURL=style.css.map */

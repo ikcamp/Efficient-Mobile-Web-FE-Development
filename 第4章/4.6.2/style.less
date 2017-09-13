@@ -1,0 +1,78 @@
+@primaryColor: #44B336;
+@mySelector: title;
+
+h1 {
+	color: @primaryColor;
+}
+.title {
+	color: @primaryColor;
+}
+
+.@{mySelector} {
+	color: #44B336;
+	font-size: bold;
+	line-height: 40px;
+} 
+
+#header {
+	display: inline;
+	float: left;
+	h1 {
+		font-size: 24px;
+		font-weight: bold;
+		a {
+			color: #44B336;
+	  }
+	}
+}
+
+a {
+	color: #333;
+	&:hover {
+		color: #44B336
+  }
+}
+
+.button {
+	&-ok {
+		background-color: green;
+  }
+  &-warn {
+    background-color: yellow;
+  }
+  &-danger {
+    background-color: red;
+  }
+}
+
+#header {
+	@primaryColor: #333;
+	h1 {
+		color: @primaryColor;
+  }
+}
+
+#footer {
+	color: @primaryColor;
+}
+
+.borderRadius(@radius) {
+	-moz-border-radius: @radius;
+	-webkit-broder-radius: @radius;
+	border-radius: @radius;
+}
+/* 应用到元素中 */
+#header {
+	.borderRadius(10px);
+}
+.btn {
+	.borderRadius(3px);
+}
+
+.generate-column(4);
+.generate-column(@n, @i:1) when(@i =<@n) {		// n, i 是mixin的两个参数，i<=n是条件
+	.column-@{i} {					//用i作为插值变量
+		width: (@i * 100% / @n);			//运算生成width的宽度
+  }
+  .generate-column(@n, (@i + 1));			// 将i+1递归调用自身mixin
+}

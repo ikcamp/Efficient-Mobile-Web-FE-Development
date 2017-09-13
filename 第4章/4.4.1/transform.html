@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+	<style type="text/css">
+		/* 定义一个容器，并指定观察者距离为100像素 */
+		.box {width: 640px; margin: 0 auto; perspective: 100px;}
+		/* 定义容器中的每一项，设置背景颜色为灰色 */
+		.box> div {float: left; width: 120px; height: 80px; margin: 40px 20px; background-color: gray;}
+		/* 定义变形元素，设置背景颜色为黑色 */
+		.box a {display:block; height: 80px; background-color: black; text-align: center; color: white;}
+		/* transform的默认值：none */
+		.box .none {transform: none;}
+		/* 2D位移：向右方和下放分别移动10像素 */
+		.box .translate {transform: translate(10px, 10px);}
+		/* 3D位移：沿Z轴向内位移30像素 */
+		.box .translate3d {transform: translate3d(0, 0, -30px);}
+		/* 2D缩放：沿X轴缩小到0.8倍，沿Y轴放大到1.2倍 */
+		.box .scale {transform: scale(0.8, 1.2);}
+		/* 3D缩放：X轴和Y轴比例不变，沿Z轴放大到1.5倍（为便于观察变化，同时将元素旋转10度） */
+		.box .scale3d {transform: scale3d(1, 1, 1.5) rotateX(10deg);}
+		/* 2D旋转：将元素顺时针旋转30度 */
+		.box .rotate {transform: rotate(30deg);}
+		/* 3D旋转：在3D空间X=1，Y=0.2，Z=0的向量上，顺时针旋转30度*/
+		.box .rotate3d {transform: rotate3d(1, 0.2, 0, 30deg);}
+		/* 2D倾斜：将元素在X轴上倾斜30度 */
+		.box .skew {transform: skew(30deg, 0);}
+	</style>
+</head>
+<body>
+	<!-- 定义容器 -->
+	<div class="box">
+		<!-- 不变形 -->
+		<div><a class="none">none</a></div>
+		<!-- 2D位移变形 -->
+		<div><a class="translate">translate<br />(10px, 10px)</a></div>
+		<!-- 3D位移变形 -->
+		<div><a class="translate3d">translate3d<br />(0, 0, -30px)</a></div>
+		<!-- 2D缩放变形 -->
+		<div><a class="scale">scale<br />(0.8, 1.2)</a></div>
+		<!-- 3D位移变形 -->
+		<div><a class="scale3d">scale3d<br />(1, 1, 1.5)<br />rotateX(10deg)</a></div>
+		<!-- 2D旋转变形 -->
+		<div><a class="rotate">rotate<br />(30deg)</a></div>
+		<!-- 3D旋转变形 -->
+		<div><a class="rotate3d">rotate3d<br />(1,0.2,0,30deg)</a></div>
+		<!-- 2D倾斜变形 -->
+		<div><a class="skew">skew<br />(30deg,0)</a></div>
+	</div>
+</body>
+</html>

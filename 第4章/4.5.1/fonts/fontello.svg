@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="glass" unicode="&#xe800;" d="M948 746q0-19-24-43l-353-353v-429h179q15 0 25-10t11-25-11-25-25-11h-500q-14 0-25 11t-11 25 11 25 25 10h179v429l-353 353q-24 24-24 43 0 13 10 21t21 9 24 3h786q13 0 24-3t21-9 10-21z" horiz-adv-x="1000" />
+
+<glyph glyph-name="music" unicode="&#xe801;" d="M857 725v-625q0-28-19-50t-48-33-58-18-53-6-54 6-58 18-48 33-19 50 19 50 48 33 58 18 54 6q58 0 107-22v300l-429-132v-396q0-28-19-50t-48-33-58-18-53-6-54 6-58 18-48 33-19 50 19 50 48 34 58 17 54 6q58 0 107-21v539q0 17 10 32t28 20l464 142q7 3 16 3 22 0 38-16t15-38z" horiz-adv-x="857.1" />
+
+<glyph glyph-name="search" unicode="&#xe802;" d="M643 386q0 103-73 176t-177 74-177-74-73-176 73-177 177-73 177 73 73 177z m286-465q0-29-22-50t-50-21q-30 0-50 21l-191 191q-100-69-223-69-80 0-153 31t-125 84-84 125-31 153 31 152 84 126 125 84 153 31 153-31 125-84 84-126 31-152q0-123-69-223l191-191q21-21 21-51z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="mail" unicode="&#xe803;" d="M929 11v428q-18-20-39-36-149-115-238-189-28-24-46-37t-48-28-57-13h-2q-26 0-57 13t-48 28-46 37q-88 74-238 189-21 16-39 36v-428q0-7 6-13t12-5h822q7 0 12 5t6 13z m0 586v14t-1 7-1 7-3 5-5 4-8 2h-822q-7 0-12-6t-6-12q0-94 83-159 107-84 223-176 4-3 20-17t25-21 25-17 28-16 24-5h2q11 0 24 5t28 16 25 17 25 21 20 17q116 92 224 176 30 24 56 65t26 73z m71 21v-607q0-37-26-63t-63-27h-822q-36 0-63 27t-26 63v607q0 37 26 63t63 26h822q37 0 63-26t26-63z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

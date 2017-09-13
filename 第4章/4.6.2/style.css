@@ -1,0 +1,66 @@
+h1 {
+  color: #44B336;
+}
+.title {
+  color: #44B336;
+}
+.title {
+  color: #44B336;
+  font-size: bold;
+  line-height: 40px;
+}
+#header {
+  display: inline;
+  float: left;
+}
+#header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+#header h1 a {
+  color: #44B336;
+}
+a {
+  color: #333;
+}
+a:hover {
+  color: #44B336;
+}
+.button-ok {
+  background-color: green;
+}
+.button-warn {
+  background-color: yellow;
+}
+.button-danger {
+  background-color: red;
+}
+#header h1 {
+  color: #333;
+}
+#footer {
+  color: #44B336;
+}
+/* 应用到元素中 */
+#header {
+  -moz-border-radius: 10px;
+  -webkit-broder-radius: 10px;
+  border-radius: 10px;
+}
+.btn {
+  -moz-border-radius: 3px;
+  -webkit-broder-radius: 3px;
+  border-radius: 3px;
+}
+.column-1 {
+  width: 25%;
+}
+.column-2 {
+  width: 50%;
+}
+.column-3 {
+  width: 75%;
+}
+.column-4 {
+  width: 100%;
+}

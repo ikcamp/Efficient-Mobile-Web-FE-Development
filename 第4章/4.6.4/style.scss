@@ -1,0 +1,61 @@
+$font-stack: ('Helvetica', 'Arial', sans-serif);
+
+$name: foo;
+$attr: border;
+p.#{$name} {
+	#{$attr}-color: #44b336;
+}
+
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+// 使用mixin
+div {
+	@include clearfix;
+}
+
+$grid-width: 40px;		// 默认每格宽度
+$gutter-width: 10px;		// 默认每格间距
+@function grid-width($n) {
+	// 可以为不同元素设置不同的格数，间距保持统一
+	@return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+// 生成一个占据五格的sidebar
+#sidebar { width: grid-width(5); }
+
+$type: hujiang;
+// 根据type变量生成p选择器的颜色
+p {
+    @if $type == baidu {
+      color: blue;
+  } @else if $type == alibaba {
+    color: orange;
+  } @else if $type == hujiang {
+    color: green;			// 因为type为hujiang，color为green
+  } @else {
+    color: black;
+  }
+}
+
+@for $i from 1 through 3 {
+	.item-#{$i} { width: 2em * $i;}  // 从item-1到item-3每个增加2em宽度
+}
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+	#{$header} {
+		font-size: $size			//快速生成不同字号的选择器
+  }
+}
+
+

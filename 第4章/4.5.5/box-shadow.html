@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>box-shadow</title>
+		<style type="text/css">
+			.dropdown-menu {
+				display: block;
+				width: 200px;
+				list-style: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				padding: 0;
+				-moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+				-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    			box-shadow: 0 6px 12px rgba(0,0,0,.175);
+			}
+			.dropdown-menu li {
+				font-size: 14px;
+				width: 200px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				border-bottom: 1px solid #ccc;
+			}
+			.dropdown-menu li:last-child {
+				border-bottom: none;
+			}
+			.dropdown-menu li a {
+				color: #333;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="dropdown-menu">
+			<li><a href="#">菜单一</a></li>
+			<li><a href="#">菜单二</a></li>
+			<li><a href="#">菜单三</a></li>
+			<li><a href="#">菜单四</a></li>
+		</ul>
+	</body>
+</html>

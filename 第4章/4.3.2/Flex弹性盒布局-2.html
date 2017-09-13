@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            /*设置容器为flex布局*/
+            display: flex;
+            /*设置项目的排列顺序为垂直排列*/
+            flex-direction: column;
+            /*设置高度为视图高度的100%*/
+            height: 100vh;
+            margin: 0;
+        }
+
+        header,
+        footer {
+            background-color: darkgray;
+        }
+
+        header {
+            /*固定顶部的高度为8em*/
+            flex-basis: 8em;
+        }
+
+        footer {
+            /*固定底部的高度为4em，换了一种写法，等同于flex-basis:4em*/
+            flex: 0 0 4em;
+        }
+
+        main {
+            /*高度自适应*/
+            flex: 1;
+            /*当前元素作为容器，设置为flex布局*/
+            display: flex;
+            /*子项目的排列方向为水平排列，并且自动换行*/
+            flex-flow: row wrap;
+            /*设置子项目的对齐方式为交叉轴的起点对其*/
+            align-content: flex-start;
+        }
+
+        .item {
+            /*设置盒模型为border-box，将border的width包含在width中，否则会因为border的原因，而导致一行排不下三个*/
+            box-sizing: border-box;
+            /*设置每个item的宽度为父容器的1／3*/
+            flex: 0 0 33.33%;
+            /*设置item的高度为33.33%的视图宽度*/
+            height: 33.33vw;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
