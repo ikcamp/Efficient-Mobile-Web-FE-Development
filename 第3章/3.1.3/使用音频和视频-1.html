@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <audio controls>
+        <source src="vincent.ogg" />
+        <source src="vincent.mp3" /> 你的浏览器不支持Audio标记
+    </audio>
+
+    <section>
+        <h3>自定义播放行为</h3>
+        <audio id="audio">
+            <source src="vincent.ogg" />
+            <source src="vincent.mp3" /> 你的浏览器不支持Audio标记
+        </audio>
+        <p>
+            <button id="btnPlay">Play</button>
+            <button id="btnPause">Pause</button>
+        </p>
+        <script>
+            var audio = document.getElementById("audio")
+            document.getElementById("btnPlay").addEventListener("click", function(){
+                audio.play()
+            })
+            document.getElementById("btnPause").addEventListener("click", function(){
+                audio.pause()
+            })
+        </script>
+    </section>
+
+
+</body>
+
+</html>

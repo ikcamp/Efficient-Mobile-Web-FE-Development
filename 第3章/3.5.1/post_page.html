@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>消息发送端</title>
+</head>
+<body>
+	<script type="text/javascript">
+		;(function() {
+			// 模拟数据
+			var messages = [
+				'今天天气不错',
+				'明天的会议大家不要迟到',
+				'今晚大家去吃一顿好的',
+				'打车记得拿发票',
+				'明天请假一天',
+				'这本书干货很多，大家好好看'
+			];
+			// 随机获取message信息，真实环境是从服务端获取数据
+			var getMessage = function() {
+				var index = Math.floor(Math.random() * 10);
+				// 如果数据不存在则返回null
+				return messages[index] || null;
+			};
+			var postMessageLoop = function() {
+				var randomTime = Math.floor(Math.random() * 10000);
+				setTimeout(function() {
+					var message = getMessage();
+					if(message !== null) {
+						// 如果消息不为null，则发送消息到父页面
+						window.parent.postMessage(message, 'http://localhost:8080');
+					}
+					postMessageLoop();
+				}, randomTime);
+			};
+			postMessageLoop();
+		}());
+	</script>
+</body>
+</html>

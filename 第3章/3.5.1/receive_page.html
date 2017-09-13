@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>消息接收端</title>
+	<style type="text/css">
+		#messageList { border: 1px solid #333; border-radius: 4px; width: 200px; min-height: 150px; }
+		#postWindow { display: none; } /* 设置iframe不可见 */
+	</style>
+</head>
+<body>
+	<h3>消息接收端</h3>
+	<ul id="messageList"></ul>
+	<iframe id="postWindow" src="post_page.html"></iframe>
+	<script type="text/javascript">
+		;(function(W) {
+			var doc = W.document;
+			var msgList = doc.querySelector('#messageList');
+			// 处理新的消息
+			var handler = function(msg) {
+				var li = doc.createElement('li');
+				li.innerText = msg;
+				// 把消息显示在消息列表中
+				msgList.appendChild(li);
+			};
+			// 监听postMessage发送的消息
+			W.addEventListener('message', function(evt) {
+				// 判断消息的来源是否正确
+				if(evt.origin === 'http://localhost:8080') {
+					// 处理新的消息
+					handler(evt.data);
+				}
+			}, false);
+		}(window));
+	</script>
+</body>
+</html>

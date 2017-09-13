@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <video width="400" height="300" controls id="video">
+        <source src="dizzy.mp4#t=,15" type="video/mp4">
+        <source src="dizzy.webm" type="video/webm">
+        <source src="dizzy.ogv" type="video/ogg">
+        <p>你的浏览器不支持HTML5视频</p>
+    </video>
+    <p>
+        <input type="number" name="time" value="10" id="time">
+        <button id="btnSeek">GetInfo</button>
+        <script>
+            var video = document.getElementById("video")
+            var time = document.getElementById("time")
+            document.getElementById("btnSeek").addEventListener("click", function () {
+                video.currentTime = time.value;
+            })
+
+            var sources =  video.querySelectorAll("source")
+            var lastSource = sources[sources.length - 1]
+            lastSource.addEventListener("error", function(){
+                alert('No source available')
+            })
+        </script>
+    </p>
+
+</body>
+
+</html>

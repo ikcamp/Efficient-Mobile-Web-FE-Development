@@ -1,0 +1,16 @@
+{
+  "name": "historyapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.0.17",
+    "node-router": "^0.1.5",
+    "node-static": "^0.7.9"
+  }
+}

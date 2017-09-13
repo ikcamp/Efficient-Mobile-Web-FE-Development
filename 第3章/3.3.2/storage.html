@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+<meta charset="utf-8" />
+<title>随手记</title>
+</head>
+<body>
+<h2>随手记--本地保存</h2>
+<div>
+	<textarea id="content" cols="100" rows="20"></textarea>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+// 存储数据
+localStorage.setItem('key', '需要存储的数据');
+// 获取数据
+var value = localStorage.getItem('key');
+// 删除数据
+localStorage.removeItem('key');
+
+// 存储数据
+localStorage['key1'] = 'value1';
+localStorage.key2 = 'value2';
+// 获取数据
+var value1 = localStorage['key1'];
+var value2 = localStorage.key2;
+
+// 遍历所有存储的数据
+for(var i=0;i<localStorage.length;i++){
+	// 获取key
+	var key = localStorage.key(i);
+	// 获取value
+	var value = localStorage.getItem(key);
+	// 打印到控制台
+	console.log(key, value);
+}
+// 清空所有数据
+localStorage.clear();
+
+// 获取记录内容的文本域
+var el = document.querySelector('#content');
+// 页面载入时，从本地获取存储的数据
+el.value = localStorage.getItem('data') || '';
+// 为文本域DOM节点添加blur事件
+el.addEventListener('blur', function(){
+	// 获取文本域的内容
+	var data = el.value;
+	// 保存到本地
+	localStorage.setItem('data', data);
+});
+</script>

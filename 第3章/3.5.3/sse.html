@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Server-Sent Events Demo</title>
+  <meta charset="UTF-8" />
+  <script>
+    // 监听load事件，页面load完成之后进行后续操作
+    window.addEventListener("load", function() {
+      // 缓存DOM对象
+      var status = document.getElementById("status");
+      var output = document.getElementById("output");
+      var source;
+
+      function connect() {
+        // 向服务端建立连接
+        source = new EventSource("stream");
+        // 监听message事件，获取服务端发送的数据
+        source.addEventListener("message", function(event) {
+          output.textContent = event.data;
+        }, false);
+        // 监听open事件，判断连接是否进行中
+        source.addEventListener("open", function(event) {
+          status.textContent = "连接打开了!";
+        }, false);
+        // 监听error事件，处理连接错误的情况
+        source.addEventListener("error", function(event) {
+          if (event.target.readyState === EventSource.CLOSED) {
+            source.close();
+            status.textContent = "连接关闭了!";
+          } else {
+            status.textContent = "连接关闭了!未知错误！";
+          }
+        }, false);
+      }
+        // 判断浏览器是否支持Server Sent Event
+        if (!!window.EventSource) {
+          connect();
+        } else {
+          status.textContent = "对不起，你的浏览器不支持 server-sent events";
+        }
+      }, false);
+  </script>
+</head>
+<body>
+  <span id="status">Connection closed!</span><br />
+  <span id="output"></span>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+  <title>地理位置</title>
+</head>
+<body>
+  <div>
+    <div>我的位置是：<span id="pos"></span></div>
+    <div id="map"></div>
+  </div>
+  <script type="text/javascript">
+    function showPosition(position) {
+      var latlon = position.coords.latitude + ',' + position.coords.longitude;
+      var img_url = 'http://maps.googleapis.com/maps/api/staticmap?center='
+      + latlon + '&zoom=14&size=400x300&sensor=false';
+      document.getElementById('pos').innerHTML = latlon;
+      document.getElementById('map').innerHTML = '<img src="' + img_url + '" />';
+    }
+    function success(position){
+      console.log('获取位置成功：', position.coords);
+      showPosition(position);
+    }
+    function error(positionError){
+      console.log('获取位置失败：', positionError);
+    }
+    var options = {
+      enableHighAccuracy: false,
+      timeout: 30000,
+      maximumAge: 0
+    }
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error, options);
+    } else {
+      alert('您的浏览器不支持Geolocatioin!')
+    }
+
+    // var watchId = navigator.geolocation.watchPosition(success, error, options);
+    // navigator.geolocation.clearWatch(watchId)
+  </script>
+</body>
+</html>

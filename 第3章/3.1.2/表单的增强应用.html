@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="css/style.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <form>
+        <input type="tel" name="tel" value="" placeholder="请输入手机号码" pattern="1[3-8][0-9]{9}" title="请输入11位手机号">
+        <label>Choose a browser from this list:
+<input list="browsers" name="myBrowser" /></label>
+        <datalist id="browsers">
+            <option value="Chrome">
+                <option value="Firefox">
+                    <option value="Internet Explorer">
+                        <option value="Opera">
+                            <option value="Safari">
+        </datalist>
+        <button type="submit">Save</button>
+        <input type=range min=20 max=100 step=2>
+        <input type="date">
+        <p>
+            <input type="color">
+        </p>
+
+        <p>
+            <input type="text" placeholder="此项必填" required>
+        </p>
+
+        <p>
+            <progress value="30" max="100"></progress>
+        </p>
+        <p>
+            <meter value="3" min="0" max="10">3/10</meter><br>
+            <meter value="0.6">60%</meter>
+        </p>
+        <p contenteditable="true">这里的内容是可以编辑的</p>
+    </form>
+
+</body>
+
+</html>

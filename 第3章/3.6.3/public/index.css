@@ -1,0 +1,22 @@
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.calc {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 60px;
+    height: 25px;
+    border: solid 1px black;
+    margin-right: 30px;
+    text-align: center;
+}
+
+input[type="button"] {
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
