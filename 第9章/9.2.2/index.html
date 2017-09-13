@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <title>组件生命周期实例</title>
+  <script src='lib/react.min.js'></script>
+  <script src='lib/react-dom.min.js'></script>
+  <script src='lib/browser.min.js'></script>
+</head>
+<body>
+  <div id='root'></div>
+  <script type='text/babel'>
+    var MyComponent = React.createClass({
+      getDefaultProps: function() {
+        console.log('getDefaultProps');
+        return{ count: 10 };
+      },
+      getInitialState: function() {
+        console.log('getInitialState'); return{ isFinished: false };
+      },
+      componentWillMount: function() { console.log('componentWillMount'); },
+      toggleState: function(event) {
+        console.log('【切换状态】');
+        this.setState({ isFinished: !this.state.isFinished });
+      },
+      componentDidMount: function() {
+        console.log('componentDidMount');
+        if (this.state.isFinished) {
+          ReactDOM.findDOMNode(this.refs.told).innerHTML = '，恭喜~';
+        } else {
+          ReactDOM.findDOMNode(this.refs.told).innerHTML = '，加油~';
+        }
+      },
+      componentWillReceiveProps: function(nextProps) {
+        console.log('componentWillReceiveProps');
+      },
+      shouldComponentUpdate: function(nextProps, nextState) {
+        console.log('shouldComponentUpdate'); return true;
+      },
+      componentWillUpdate: function() { console.log('componentWillUpdate'); },
+      render: function() {
+        console.log('render');
+        return(
+          <div>
+            本课程共{this.props.count}课时，您
+            <a href="javascript:void(0)" onClick={this.toggleState}>
+              {this.state.isFinished ? '已经学完' : '还未学完'}
+            </a>
+            <span ref='told'></span>
+          </div>
+        )
+      },
+      componentDidUpdate: function() {
+        console.log('componentDidUpdate');
+        if (this.state.isFinished) {
+          ReactDOM.findDOMNode(this.refs.told).innerHTML = '，恭喜~';
+        } else {
+          ReactDOM.findDOMNode(this.refs.told).innerHTML = '，加油~';
+        }
+      },
+      componentWillUnmount: function() { console.log('componentWillUnmount'); }
+    });  
+    var MyContainer = React.createClass({
+      getInitialState: function () { return{ count: 10, showComponent: true }; },
+      resetCount: function() {
+        console.log('【变更课时】');
+        this.setState({ count: Math.round(Math.random() * 10) + 10 });
+      },
+      unmountComponent() {
+        console.log('【卸载组件】');
+        this.setState({ showComponent: !this.state.showComponent });
+      },
+      render: function() {
+        var myComponent = null;
+        if (this.state.showComponent) {
+          myComponent = <MyComponent count={this.state.count} />
+        }
+        return(
+          <div>
+            {myComponent}
+            <button type="button" onClick={this.resetCount}>
+              变更课时
+            </button>
+            <button type="button" onClick={this.unmountComponent}>
+              卸载卸载
+            </button>
+          </div>
+        )
+      }
+    });
+    ReactDOM.render(<MyContainer/>, document.querySelector('#root'));
+  </script>
+</body>
+</html>

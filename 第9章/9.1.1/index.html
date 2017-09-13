@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zepto Todos</title>
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="scripts/zepto.min.js" type="text/javascript"></script>
+    <script src="scripts/handlebars.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <h1>Todos</h1>
+        <input class="new-todo" type="text">
+    </header>
+    <ul class="todos"></ul>
+    <!-- Templates -->
+    <script id="entry-template" type="text/x-handlebars-template">
+        <li class="todo">
+            <input class="toggle" type="checkbox" {{#if done}} checked {{/if}}/>
+            <label>{{title}}</label>
+            <a class="destroy">删除</a>
+        </li>
+    </script>
+    <script type="text/javascript">
+        var $_input = $('.new-todo'),
+            $_todos = $(".todos"),
+            $_entry = $("#entry-template"), 
+            compiler = Handlebars.compile($_entry.html());
+        /* 输入新的待办事项 */
+        $_input.on('keydown', function(e){
+            if (e.keyCode === 13) {
+                var data = {"title": $_input.val(), "done": false};
+                $(compiler(data)).appendTo($_todos);
+                $_input.val('');
+            }
+        });
+        /* 删除待办事项 */
+        $_todos.on('click', function(e){        
+            var target = e.target || e.srcElement;
+            if(target.nodeName === 'A') {
+                $(target).parent().remove();
+            }
+        });
+
+    </script>
+</body>
+</html>

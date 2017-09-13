@@ -1,0 +1,33 @@
+<!doctype html>
+<html data-framework="vue">
+	<head>
+		<meta charset="utf-8">
+		<title>Vue.js • TodoMVC</title>
+		<link rel="stylesheet" href="./todo.css">
+		<style> [v-cloak] { display: none; } </style>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<section class="todoapp" v-cloak>
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo" @keyup.enter="addTodo">
+			</header>
+			<section class="main" v-show="todos.length">
+				<ul class="todo-list">
+					<li class="todo" v-for="todo in todos">
+						<div class="view">
+							<input class="toggle" type="checkbox" v-model="todo.completed">
+							<label>{{todo.title}}</label>
+							<button class="destroy" @click="removeTodo(todo)"></button>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+		</footer>
+		<script src="./todo.js"></script>
+	</body>
+</html>

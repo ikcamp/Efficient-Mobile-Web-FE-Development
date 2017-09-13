@@ -1,0 +1,56 @@
+.todo-app {
+  font-size: 12px;
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border: solid 1px #eee;
+  border-radius: 5px; /* 圆角 */
+  box-shadow: 3px 3px 10px rgba(0,0,0,.1);  /* 阴影 */
+}
+.header .title { text-align: center; } /* 标题居中 */
+.header button { float: right; margin-right: 10px; } /* 添加按钮 */
+.header .input-wrapper { margin-right: 50px; }
+.header .input-wrapper input {
+  width: 45%;
+}
+.header .input-wrapper .date {  /* 日期 */
+  width: 25%;
+  margin-left: 2%;
+}
+.header .input-wrapper .time {  /* 时间 */
+  width: 20%;
+  margin-left: 2%;
+}
+.bar { font-size: 11px; margin-top: 10px; }
+.bar span {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #198be5;
+}
+.todo-list-wrapper { margin-top: 20px; }
+.todo-list { margin-top: 10px; }
+.todo-item {  /* 备忘事项 */
+  font-size: 12px;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: solid 1px #eee;
+}
+.todo-item .text { margin-left: 10px; }
+.todo-item .color { margin-left: 10px; width: 20px; }
+.todo-item.done { color: grey; } /* 已完成事项 */
+.todo-item .del {  /* 删除按钮 */
+  cursor: pointer;
+  color: red;
+  margin-left: 20px;
+  visibility: hidden;
+}
+.todo-item:hover .del {
+  color: red;
+  margin-left: 20px;
+  visibility: visible;
+}
+.todo-item.done .text {
+  text-decoration: line-through;
+}
+.pull-right { float: right; }
